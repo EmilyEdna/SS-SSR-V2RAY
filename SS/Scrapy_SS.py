@@ -25,8 +25,8 @@ class SS:
                 data = item.split(',')[1]
                 img = base64.urlsafe_b64decode(data + '=' *
                                                (4 - len(data) % 4))
-                ImgPath.append('./' + str(count) + '.png')
-                fw = open('./' + str(count) + '.png', 'wb')
+                ImgPath.append('SS/' + str(count) + '.png')
+                fw = open('SS/' + str(count) + '.png', 'wb')
                 fw.write(img)
                 fw.close()
         return ImgPath
@@ -42,11 +42,10 @@ class SS:
         return codebytes
 
     def SaveFile(self, bytes):
-        with open('README.md', 'r+', encoding='utf-8') as f:
+        with open('SS/SS.txt', 'r+', encoding='utf-8') as f:
             f.seek(0)
             f.truncate()
-        with open('README.md', 'a', encoding='utf-8') as f:
+        with open('SS/SS.txt', 'a', encoding='utf-8') as f:
             for data in bytes:
                 f.write(data)
                 f.write('\n')
-            

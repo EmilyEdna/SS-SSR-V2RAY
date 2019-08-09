@@ -1,7 +1,7 @@
-import Scrapy_SS
+from Scrapy_SS import SS
 
 if __name__ == "__main__":
-    res = Scrapy_SS.SS()
+    res = SS()
     lists = res.GetHtmlText()
     byte = res.QrCode(lists)
     res.SaveFile(byte)
