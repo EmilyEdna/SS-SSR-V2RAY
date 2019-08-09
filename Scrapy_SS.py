@@ -42,10 +42,11 @@ class SS:
         return codebytes
 
     def SaveFile(self, bytes):
-        with open('README.md', 'r+') as f:
+        with open('README.md', 'r+', encoding='utf-8') as f:
             f.seek(0)
-            f.truncate()  #清空文件
-        with open('README.md', 'a') as f:
+            f.truncate()
+        with open('README.md', 'a', encoding='utf-8') as f:
             for data in bytes:
                 f.write(data)
                 f.write('\n')
+            f.write("以上SS链接每晚12点更新端口")
