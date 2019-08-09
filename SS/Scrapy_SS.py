@@ -49,4 +49,4 @@ class SS:
             for data in bytes:
                 f.write(data)
                 f.write('\n')
-            f.write("以上SS链接每晚12点更新端口")
+            
