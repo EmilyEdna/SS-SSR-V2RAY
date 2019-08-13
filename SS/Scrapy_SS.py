@@ -5,7 +5,7 @@ import pyzbar.pyzbar as pyzbar
 from PIL import Image
 
 
-class SS:
+class SS(object):
     def __init__(self):
         self = self
 

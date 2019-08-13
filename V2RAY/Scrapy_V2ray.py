@@ -2,12 +2,12 @@ import requests
 import re
 
 
-class V2RAY:
+class V2RAY(object):
     def __init__(self):
         self = self
 
     def GetHtmlText(self):
-        vmess=[]
+        vmess = []
         SSURL = "https://free.ishadowx.biz/"
         headers = {
             'User-Agent':
