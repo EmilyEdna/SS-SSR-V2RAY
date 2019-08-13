@@ -8,7 +8,7 @@ class V2RAY:
 
     def GetHtmlText(self):
         vmess=[]
-        SSURL = "https://xxx.ishadowx.org/"
+        SSURL = "https://free.ishadowx.biz/"
         headers = {
             'User-Agent':
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
