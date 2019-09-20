@@ -21,14 +21,13 @@ class SS(object):
         count = 0
         for item in res:
             count = count + 1
-            if (count != 4) and (count != 6):
-                data = item.split(',')[1]
-                img = base64.urlsafe_b64decode(data + '=' *
+            data = item.split(',')[1]
+            img = base64.urlsafe_b64decode(data + '=' *
                                                (4 - len(data) % 4))
-                ImgPath.append('SS/' + str(count) + '.png')
-                fw = open('SS/' + str(count) + '.png', 'wb')
-                fw.write(img)
-                fw.close()
+            ImgPath.append('SS/' + str(count) + '.png')
+            fw = open('SS/' + str(count) + '.png', 'wb')
+            fw.write(img)
+            fw.close()
         return ImgPath
 
     def QrCode(self, ImgPath):
