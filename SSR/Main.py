@@ -1,5 +1,6 @@
 import requests
 import json
+import lzstring
 
 SSRApi = "https://lncn.org/api/lncn"
 
@@ -11,7 +12,7 @@ def GetSSR():
 
 
 def SaveSSR():
-    sub = GetSSR() #目前还需要解密
+    sub = GetSSR()  #目前还需要解密
     with open('SSR/SSR.txt', 'r+', encoding='utf-8') as f:
         f.seek(0)
         f.truncate()
