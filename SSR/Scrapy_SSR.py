@@ -45,6 +45,8 @@ class SSR(object):
             f.seek(0)
             f.truncate()
         with open('SSR/SSR.txt', 'a', encoding='utf-8') as f:
+            res = ''
             for data in SSRURL:
-                result = (base64.b64encode((data + '\r\n').encode())).decode()
-                f.write(result)
+                res = res + data + '\n'
+            result = (base64.b64encode((res).encode())).decode()
+            f.write(result)
