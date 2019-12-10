@@ -1,5 +1,6 @@
 import requests
 import re
+import base64
 
 
 class V2RAY(object):
@@ -26,5 +27,5 @@ class V2RAY(object):
             f.truncate()
         with open('V2RAY/V2RAY.txt', 'a', encoding='utf-8') as f:
             for data in vmess:
-                f.write(data)
-                f.write('\n')
+                result = (base64.b64encode((data + '\r\n').encode())).decode()
+                f.write(result)
