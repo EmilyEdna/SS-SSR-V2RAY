@@ -21,11 +21,20 @@ class V2RAY(object):
             vmess.append(item[0])
         return vmess
 
-    def SaveFile(self, vmess):
-        with open('V2RAY/V2RAY.txt', 'r+', encoding='utf-8') as f:
+    def SaveFileSub(self, vmess):
+        with open('V2RAY/V2RAYSub.txt', 'r+', encoding='utf-8') as f:
             f.seek(0)
             f.truncate()
-        with open('V2RAY/V2RAY.txt', 'a', encoding='utf-8') as f:
+        with open('V2RAY/V2RAYSub.txt', 'a', encoding='utf-8') as f:
             for data in vmess:
                 result = (base64.b64encode((data + '\r\n').encode())).decode()
                 f.write(result)
+
+    def SaveFileLink(self, vmess):
+        with open('V2RAY/V2RAYLink.txt', 'r+', encoding='utf-8') as f:
+            f.seek(0)
+            f.truncate()
+        with open('V2RAY/V2RAYLink.txt', 'a', encoding='utf-8') as f:
+            for data in vmess:
+                f.write(data)
+                f.write('\n')

@@ -40,13 +40,22 @@ class SSR(object):
             SSRArr.append(ssrlink)
         return SSRArr
 
-    def SaveFile(self, SSRURL):
-        with open('SSR/SSR.txt', 'r+', encoding='utf-8') as f:
+    def SaveFileSub(self, SSRURL):
+        with open('SSR/SSRSub.txt', 'r+', encoding='utf-8') as f:
             f.seek(0)
             f.truncate()
-        with open('SSR/SSR.txt', 'a', encoding='utf-8') as f:
+        with open('SSR/SSRSub.txt', 'a', encoding='utf-8') as f:
             res = ''
             for data in SSRURL:
                 res = res + data + '\n'
             result = (base64.b64encode((res).encode())).decode()
             f.write(result)
+
+    def SaveFileLink(self, SSRURL):
+        with open('SSR/SSRLink.txt', 'r+', encoding='utf-8') as f:
+            f.seek(0)
+            f.truncate()
+        with open('SSR/SSRLink.txt', 'a', encoding='utf-8') as f:
+            for data in SSRURL:
+                f.write(data)
+                f.write('\n')
