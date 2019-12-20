@@ -4,7 +4,6 @@ import base64
 import pyzbar.pyzbar as pyzbar
 from PIL import Image
 
-
 class SS(object):
     def __init__(self):
         self = self

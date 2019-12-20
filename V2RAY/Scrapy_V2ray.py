@@ -2,7 +2,6 @@ import requests
 import re
 import base64
 
-
 class V2RAY(object):
     def __init__(self):
         self = self
