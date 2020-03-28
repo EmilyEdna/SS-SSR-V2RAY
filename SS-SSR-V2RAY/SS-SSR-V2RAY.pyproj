@@ -1,0 +1,59 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7da8a46d-4214-486f-a9e8-27aa593f38d2</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>FileHelper\Renames.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>SS-SSR-V2RAY</Name>
+    <RootNamespace>SS-SSR-V2RAY</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="FileHelper\" />
+    <Folder Include="SSR\" />
+    <Folder Include="SS\" />
+    <Folder Include="V2RAY\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileHelper\ReName.py" />
+    <Compile Include="FileHelper\Renames.py" />
+    <Compile Include="ReName.py" />
+    <Compile Include="Renames.py" />
+    <Compile Include="SSR\Main.py" />
+    <Compile Include="SSR\Scrapy_SSR.py" />
+    <Compile Include="SS\Main.py" />
+    <Compile Include="SS\Scrapy_SS.py" />
+    <Compile Include="V2RAY\Main.py" />
+    <Compile Include="V2RAY\Scrapy_V2ray.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+    <Content Include="SSR\SSRLink.txt" />
+    <Content Include="SSR\SSRSub.txt" />
+    <Content Include="SS\SS.txt" />
+    <Content Include="V2RAY\V2RAYLink.txt" />
+    <Content Include="V2RAY\V2RAYSub.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
