@@ -39,7 +39,6 @@
     <Compile Include="V2RAY\Scrapy_V2ray.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="README.md" />
     <Content Include="requirements.txt" />
     <Content Include="SSR\SSRLink.txt" />
     <Content Include="SSR\SSRSub.txt" />
