@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7da8a46d-4214-486f-a9e8-27aa593f38d2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>FileHelper\Renames.py</StartupFile>
+    <StartupFile>V2RAY\Main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
