@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7da8a46d-4214-486f-a9e8-27aa593f38d2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>SS\Main.py</StartupFile>
+    <StartupFile>V2RAY\Main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,12 +21,22 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Const\" />
     <Folder Include="FileHelper\" />
     <Folder Include="SSR\" />
     <Folder Include="SS\" />
     <Folder Include="V2RAY\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Const\Const.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Const\Header.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Const\HttpClient.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="FileHelper\ReName.py" />
     <Compile Include="FileHelper\Renames.py" />
     <Compile Include="ReName.py" />
