@@ -11,7 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>SS-SSR-V2RAY</Name>
     <RootNamespace>SS-SSR-V2RAY</RootNamespace>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>
+    </InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,22 +23,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Const\" />
     <Folder Include="FileHelper\" />
     <Folder Include="SSR\" />
     <Folder Include="SS\" />
     <Folder Include="V2RAY\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Const\Const.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Const\Header.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Const\HttpClient.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="FileHelper\ReName.py" />
     <Compile Include="FileHelper\Renames.py" />
     <Compile Include="ReName.py" />
@@ -56,17 +47,6 @@
     <Content Include="SS\SS.txt" />
     <Content Include="V2RAY\V2RAYLink.txt" />
     <Content Include="V2RAY\V2RAYSub.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Interpreter Include="env\">
-      <Id>env</Id>
-      <Version>3.7</Version>
-      <Description>env (Python 3.7 (64-bit))</Description>
-      <InterpreterPath>Scripts\python.exe</InterpreterPath>
-      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
-      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
-      <Architecture>X64</Architecture>
-    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
